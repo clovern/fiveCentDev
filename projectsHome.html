@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"> rel="stylesheet"> rel="stylesheet">
+    <link href = "./resources/css/index.css" rel = "stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script id = "projectsTemplate" type = "text/x-handlebars-template">
+        {{#each projectList}}
+        <article class="project">
+          <img class="image" src={{this.image}} alt= {{this.name}}>
+          <section class="details">
+            <h2 class="name">{{this.name}}</h2>
+            <h4 class="languages">Languages Used: {{this.languagesUsed}}</h4>
+            <h4 class="libraries">Libraries Used: {{this.librariesUsed}}</h4>
+            <p class="description">{{this.description}}</p>
+            <p class="sourceCode"><a href={{this.sourceCodeLink}}>{{this.sourceCodeLink}}</a></p>
+          </section>
+        </article>
+      {{/each}}
+    </script>
+</head>
+<body class="projectsBody">
+    <h1 class="projectsTitle">Projects</h1>
+    <div id="projectDisplay">
+
+    </div>
+    <script src="./resources/javascript/main.js" type="text/javascript"></script>
+</body>
+</html>
